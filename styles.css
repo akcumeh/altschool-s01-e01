@@ -13,8 +13,163 @@ body {
 
     background-color: #B12625;
 
+    width: 75vw;
+    margin: 0 auto;
+    max-width: 50rem;
     min-height: 100vh;
     
     display: grid;
     place-content: center;
+}
+
+main {
+    display: grid;
+    gap: 2.5rem;
+    padding: 2rem;
+    max-width: 50rem;
+}
+
+button {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 
+        .25rem .25rem .125rem #FBDB68;
+    color: black;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 250ms ease;
+    border-radius: .5rem;
+    border: #FBDB68 2px solid;
+}
+
+button:hover {
+    text-transform: capitalize !important;
+    background-color: #FBDB68;
+    color: white;
+    box-shadow:
+        .25rem .25rem .125rem #4916163f;
+}
+
+/* button:active {
+    background: transparent !important;
+    box-shadow: 0.25rem .25rem 0 #FBDB68;
+} */
+
+.top-controls,
+.bottom-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.timer-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.time-unit {
+    background: white;
+    border: 3px solid #FBDB68;
+    border-radius: .75rem;
+    padding: 2.5rem 2rem;
+    display: grid;
+    place-content: center;
+}
+
+.time-unit div {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.time-label {
+    width: 33% !important;
+    font-size: .75rem !important;
+    position: relative;
+    left: -.75rem;
+    top: -1.25rem;
+}
+
+.hint {
+    text-align: center;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.key {
+    border: rgb(69, 69, 69) .125rem solid;
+    border-radius: .25rem;
+    padding: .25rem;
+    box-shadow: 0 0.25rem 1 rgb(69, 69, 69);
+    color: white;
+    text-transform: capitalize;
+}
+
+.lapList {
+    list-style: none;
+    border-radius: .5rem;
+    padding: 1.25rem;
+    max-height: 12.5rem;
+    overflow-y: auto;
+    display: none;
+}
+
+.lapList.show {
+    display: block;
+}
+
+.lapList li {
+    padding: .5rem;
+    border-bottom: 1px solid #FBDB68;
+    font-size: 1.125rem;
+}
+
+.lapList li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "timer"
+            "hint"
+            "bottom"
+            "laps"
+            "top";
+    }
+
+    .top-controls {
+        grid-area: top;
+        grid-template-columns: 1fr;
+    }
+
+    .timer-display {
+        grid-area: timer;
+    }
+
+    .hint {
+        grid-area: hint;
+        display: none;
+    }
+
+    .bottom-controls {
+        grid-area: bottom;
+        grid-template-columns: 1fr;
+    }
+
+    .lapList {
+        grid-area: laps;
+    }
+
+    .time-unit div {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .hint {
+        display: block;
+    }
 }
