@@ -17,39 +17,46 @@
         <div class="hint">Press <span class="key">SPACEBAR</span> to start/stop the timer.</div>
 
         <main>
-            <section class="top-controls">
-                <button id="clear">Clear</button>
-                <button id="reset">Reset</button>
-            </section>
+            <button id="lap" style="display: none;">Lap</button>
 
             <section class="timer-display">
                 <div class="time-unit">
                     <div class="time-label">HH</div>
                     <div id="hours">00</div>
                 </div>
+                <span class="colon">:</span>
                 <div class="time-unit">
                     <div class="time-label">MM</div>
                     <div id="minutes">00</div>
                 </div>
+                <span class="colon">:</span>
                 <div class="time-unit">
                     <div class="time-label">SS</div>
                     <div id="seconds">00</div>
                 </div>
+                <span class="colon">.</span>
+                <div class="time-unit">
+                    <div class="time-label">MS</div>
+                    <div id="milliseconds">00</div>
+                </div>
             </section>
 
             <section class="bottom-controls">
-                <button id="start-lap">Start</button>
+                <button id="start">Start</button>
                 <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
             </section>
 
             <ul id="lapList" class="lapList"></ul>
         </main>
 
         <script src="script.js"></script>
+        
+        <footer>
+            <p>Built by <a href="https://angelumeh.dev"target="_blank"><img src="assets/favicon.ico" alt="Angel">Angel</a> (<b>ALT-SOE-025-3527</b>). Design concept by <a href="https://www.behance.net/gallery/131661811/Javascript-Stopwatch?tracking_source=search_projects%7Cstopwatch+figma&l=16" target="_blank"><img src="assets/dania.png" alt="Dania">Dania Al Hakim</a>
+    
+        </footer>
     </body>
 
-    <footer>
-        <p>Designed by <a href="https://angelumeh.dev">Angel</a> (<b>ALT-SOE-025-3527</b>).
-    </footer>
 
 </html>
