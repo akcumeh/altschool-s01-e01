@@ -34,7 +34,7 @@ main {
 button {
     background-color: white;
     padding: 1rem;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     box-shadow:
         .25rem .25rem .125rem #FBDB68;
@@ -42,7 +42,7 @@ button {
     font-size: 1.25rem;
     cursor: pointer;
     transition: all 250ms ease;
-    border-radius: .5rem;
+    border-radius: 2rem;
     border: #FBDB68 2px solid;
 }
 
@@ -206,7 +206,7 @@ button:hover {
         font-weight: 400 !important;
         position: relative;
         left: 0;
-        top: -0.75rem;
+        top: -.25rem;
     }
 
     .timer-display {
